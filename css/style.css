@@ -1,0 +1,547 @@
+/* ? css variables */
+:root {
+  --main-heading-font-size: 3.125rem;
+  --body-color: #f5f5f5;
+  --nav-bgcolor: rgba(0, 0, 0, 0.926);
+  --color-white: #fff;
+  --color-black: #000;
+  --after-color: #0078ff;
+}
+
+/* & Global style */
+* {
+  scroll-behavior: smooth;
+  scroll-padding: 70px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+img {
+  width: 100%;
+}
+body {
+  background-color: var(--body-color);
+}
+
+.head-content p::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 48%;
+  background-color: var(--after-color);
+  height: 5px;
+  width: 42px;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--after-color);
+  width: 17%;
+  height: 3px;
+}
+
+/* ^ Navbar Section */
+
+.nav-bgcolor {
+  background-color: var(--nav-bgcolor);
+  color: var(--color-white);
+}
+nav ul li .close-icon {
+  display: none;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  background-color: var(--color-white);
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 9px;
+  transition: width 0.5s;
+}
+nav ul li a:hover::after {
+  width: 75%;
+  transition: width 0.5s;
+}
+
+body:not(:has(:target)) .home-active::after,
+body:has(.home:target) .home-active::after,
+body:has(.about:target) .about-active::after,
+body:has(.services:target) .services-active::after,
+body:has(.portfolio:target) .work-active::after,
+body:has(.blog:target) .blog-active::after,
+body:has(.contact:target) .contact-active::after
+{
+    width: 75%;
+    opacity: 1;
+}
+body:has(.nav-links:target) nav{
+    height: 100vh;
+    background-color: #555555c6;
+}
+
+/* ! Header Section */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)),
+    url(../images/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+header h1 {
+  font-size: calc(var(--main-heading-font-size) + 1.5vw);
+}
+header p::after {
+  content: "|";
+  animation: typing 10s infinite;
+  transition: animation;
+}
+@keyframes typing {
+  0% {
+    content: "D|";
+  }
+  1% {
+    content: "De|";
+  }
+  2% {
+    content: "Des|";
+  }
+  3% {
+    content: "Desi|";
+  }
+  4% {
+    content: "Desig|";
+  }
+  5% {
+    content: "Design|";
+  }
+  6% {
+    content: "Designe|";
+  }
+  7% {
+    content: "Designer|";
+  }
+  8% {
+    content: "Designer|";
+  }
+  9% {
+    content: "Designe|";
+  }
+  10% {
+    content: "Design|";
+  }
+  11% {
+    content: "Desig|";
+  }
+  12% {
+    content: "Desi|";
+  }
+  13% {
+    content: "Des|";
+  }
+  14% {
+    content: "De|";
+  }
+  15% {
+    content: "De|";
+  }
+  16% {
+    content: "Dev|";
+  }
+  17% {
+    content: "Deve|";
+  }
+  18% {
+    content: "Devel|";
+  }
+  19% {
+    content: "Develo|";
+  }
+  20% {
+    content: "Develop|";
+  }
+  21% {
+    content: "Develope|";
+  }
+  22% {
+    content: "Developer|";
+  }
+  23% {
+    content: "Developer|";
+  }
+  24% {
+    content: "Develope|";
+  }
+  25% {
+    content: "Develop|";
+  }
+  26% {
+    content: "Develo|";
+  }
+  27% {
+    content: "Devel|";
+  }
+  28% {
+    content: "Deve|";
+  }
+  29% {
+    content: "Dev|";
+  }
+  30% {
+    content: "De|";
+  }
+  31% {
+    content: "D|";
+  }
+  32% {
+    content: "F|";
+  }
+  33% {
+    content: "Fr|";
+  }
+  34% {
+    content: "Fre|";
+  }
+  35% {
+    content: "Free|";
+  }
+  36% {
+    content: "Freel|";
+  }
+  37% {
+    content: "Freela|";
+  }
+  38% {
+    content: "Freelan|";
+  }
+  39% {
+    content: "Freelanc|";
+  }
+  40% {
+    content: "Freelance|";
+  }
+  41% {
+    content: "Freelancer|";
+  }
+  42% {
+    content: "Freelancer|";
+  }
+  43% {
+    content: "Freelance|";
+  }
+  44% {
+    content: "Freelanc|";
+  }
+  45% {
+    content: "Freelan|";
+  }
+  46% {
+    content: "Freela|";
+  }
+  47% {
+    content: "Freel|";
+  }
+  48% {
+    content: "Free|";
+  }
+  49% {
+    content: "Fre|";
+  }
+  50% {
+    content: "Fr|";
+  }
+  51% {
+    content: "F|";
+  }
+  52% {
+    content: "P|";
+  }
+  53% {
+    content: "Ph|";
+  }
+  54% {
+    content: "Pho|";
+  }
+  55% {
+    content: "Phot|";
+  }
+  56% {
+    content: "Photo|";
+  }
+  57% {
+    content: "Photog|";
+  }
+  58% {
+    content: "Photogr|";
+  }
+  59% {
+    content: "Photogra|";
+  }
+  60% {
+    content: "Photograp|";
+  }
+  61% {
+    content: "Photograph|";
+  }
+  62% {
+    content: "Photographe|";
+  }
+  63% {
+    content: "Photographer|";
+  }
+  64% {
+    content: "Photographe|";
+  }
+  70% {
+    content: "Photographe|";
+  }
+  72% {
+    content: "Photograph|";
+  }
+  75% {
+    content: "Photograp|";
+  }
+  79% {
+    content: "Photogra|";
+  }
+  82% {
+    content: "Photogr|";
+  }
+  85% {
+    content: "Photog|";
+  }
+  88% {
+    content: "Photo|";
+  }
+  90% {
+    content: "Phot|";
+  }
+  92% {
+    content: "Pho|";
+  }
+  95% {
+    content: "Ph|";
+  }
+  97% {
+    content: "P|";
+  }
+  100% {
+    content: "|";
+  }
+}
+
+/* ! About section */
+section.about {
+  background-color: var(--color-white);
+}
+
+/* ? Services Section */
+section.services .service-box {
+  background-color: var(--color-white);
+}
+.icon {
+  width: 100px;
+  height: 100px;
+  font-size: 30px;
+  border: 10px solid var(--after-color);
+  transition: border-color 0.5s, color 0.5s;
+}
+section.services .services-card:hover .icon {
+  border-color: rgba(0, 119, 255, 0.337);
+  color: var(--color-white);
+}
+.icon span {
+  width: 80px;
+  height: 80px;
+  transition: background-color 0.5s;
+}
+section.services .services-card:hover span {
+  background-color: var(--after-color);
+}
+
+/* ~ Counter Section */
+section.counter {
+  /* height: 45vh; */
+  background-image: linear-gradient(
+      rgba(0, 119, 255, 0.611),
+      rgba(0, 119, 255, 0.611)
+    ),
+    url(../images/post-3.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: var(--color-white);
+}
+
+.counter-icon {
+  border-color: #cde1f8;
+}
+
+/* ^ Portfolio Section */
+section.portfolio .work-box {
+  background-color: var(--color-white);
+}
+section.portfolio .work-content span {
+  color: var(--after-color);
+}
+section.portfolio .work-content .icon {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #0078ff;
+  font-size: 25px;
+}
+section.portfolio .work-box img {
+  transition: scale 1s;
+}
+section.portfolio .work-img {
+  overflow: hidden;
+}
+section.portfolio .work-box:hover img {
+  scale: 1.3;
+}
+
+/* ! Slider Section */
+.slider img {
+  width: 15%;
+}
+.slider {
+  background-image: linear-gradient(
+      rgba(0, 119, 255, 0.611),
+      rgba(0, 119, 255, 0.611)
+    ),
+    url(../images/overlay-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  color: var(--color-white);
+}
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* ? Blog Section */
+section.blog .blog-box {
+  background-color: var(--color-white);
+  /* border-radius: 5px; */
+}
+section.blog .category {
+  background-color: var(--after-color);
+  width: fit-content;
+  color: var(--color-white);
+  margin-inline: auto;
+  transform: translateY(-50%);
+  font-size: 15px;
+}
+section.blog a {
+  transition: color 0.5s;
+}
+section.blog a:hover {
+  color: var(--after-color);
+}
+section.blog .blog-footer {
+  background-color: var(--body-color);
+}
+section.blog .blog-footer img {
+  width: 30px;
+}
+
+/* & Contact Section */
+section.contact {
+  background-image: linear-gradient(
+      rgba(0, 119, 255, 0.611),
+      rgba(0, 119, 255, 0.611)
+    ),
+    url(../images/overlay-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+section.contact .container {
+  background-color: var(--color-white);
+}
+section.contact .container form input,
+section.contact .container form textarea {
+  border: 1px solid #7777774f;
+  outline: none;
+  resize: vertical;
+}
+section.contact .container form input:focus,
+section.contact .container form textarea:focus {
+  outline: none;
+  border-color: var(--after-color);
+  box-shadow: 0 0 5px var(--after-color);
+}
+.btn {
+  background-color: var(--after-color);
+  color: var(--color-white);
+  width: fit-content;
+  padding: 10px 24px;
+  font-size: 20px;
+  transition: background-color 0.5s, color 0.5s;
+}
+.btn:hover {
+  background-color: rgba(0, 119, 255, 0.737);
+  color: var(--color-white);
+}
+
+section.contact ul.contact-icons i {
+  color: var(--after-color);
+}
+section.contact .social .icon {
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  border: 3px solid var(--after-color);
+  transition: border-color 0.5s, color 0.5s;
+}
+section.contact .social .icon:hover {
+  border-color: rgba(0, 119, 255, 0.337);
+  color: var(--color-white);
+}
+.social i {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.contact .social .icon span {
+  width: 45px;
+  height: 45px;
+  transition: background-color 0.5s;
+}
+section.contact .social .icon:hover span {
+  background-color: var(--after-color);
+}
+
+/* ^ Footer Section */
+footer {
+  background-color: #0062d3;
+  color: var(--color-white);
+}
+
+/* ? Back Top */
+
+.back-top {
+  position: fixed;
+  background-color: var(--after-color);
+  color: var(--color-white);
+  width: 35px;
+  height: 35px;
+  bottom: 10px;
+  right: 20px;
+  transition: background-color 0.5s;
+}
+.back-top:hover {
+  background-color: rgba(0, 119, 255, 0.737);
+}

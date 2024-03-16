@@ -1,0 +1,29 @@
+@media screen and (max-width:992px) {
+
+
+    nav ul{
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color: #fff;
+        width: 95%;
+        height: 90%;
+        color: #000;
+        padding: 10px 20px;
+    }
+    .navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+        color: #000;
+    }
+    .navbar-nav .nav-link.active:hover, .navbar-nav .nav-link.show:hover{
+        color: var(--after-color);
+    }
+    nav ul li a::after,
+    nav ul li a:hover::after{
+        width: 0;
+        height: 0;
+    }
+    nav ul li .close-icon{
+        display: block;
+        text-align: right;
+    }
+}
